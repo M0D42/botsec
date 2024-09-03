@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('https://i.gifer.com/BLkE.gif');
+            margin: 0;
+            padding: 0;
+        }
+        .My_hahah{
+            color:rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(28, 28, 28);
+            text-align: center;
+            margin:24px;
+            
+        }
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 60px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 9999px;
+            transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+        }
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(45deg) translateY(8px);
+        }
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(-45deg) translateY(-8px);
+        }
+        .top {
+            background-color: rgb(43, 41, 41);
+            min-height: 1cm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 3px;
+        }
+        .top h2 {
+            color: rgb(250, 250, 250);
+            margin-top: 10px;
+            margin: 0;
+        }
+        #flyout {
+            width: 50vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -50vw;
+            background-color: rgb(57, 165, 6);
+            transition: left 250ms ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+        #flyout.open {
+            left: 0;
+        }
+        #flyout h2 {
+            color: white;
+            margin: 10px 0;
+        }
+        #flyout a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="top">
+        <h2>mesenger</h2>
+    </div>
+    <nav>
+        <div id="flyout">
+            
+            
+            <h2 style="margin-top: 20vw;"><a href="index.html">home</a></h2>
+            <h2><a href="forum.html">work in prgress</a></h2>
+            <h2><a href="#">hi</a></h2>
+            <h2><a href="#">hi</a></h2>
+            <h2><a href="#">hi</a></h2>
+        </div>
+    </nav>
+    <div class="penutbutter:)">
+        
+        <div class="My_hahah"> 
+            <H3>Contacts  </H3>
+            <p3>SIGNAL:<p3><a href="https://signal.me/#eu/bdX2c-c3nos19LJW0y5tjnZOjeRvD1NVQ0GcK2XbNHmjUtJhCIdIIo0jvwxn3F36">Signal.42</a>
+            <div></div>
+            <p3>Gmail:</p3><a style="color: rgb(28, 246, 28); text-decoration:none;" href="mailto:botsec42@gmail.com">click here </a>
+        <div></div>
+        
+        </div>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const flyout = document.getElementById('flyout');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            flyout.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
